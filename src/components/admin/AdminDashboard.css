@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.adm-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #f0f4ff;
+}
+
+/* ===== SIDEBAR ===== */
+.adm-sidebar {
+  width: 230px;
+  min-width: 230px;
+  background: #fff;
+  border-right: 1px solid #e8eef8;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 16px;
+  height: 100vh;
+}
+
+.adm-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 36px;
+  padding: 0 10px;
+}
+
+.adm-logo-dot {
+  width: 10px;
+  height: 10px;
+  background: #5599e1;
+  border-radius: 50%;
+}
+
+.adm-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.adm-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: none;
+  background: none;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.adm-nav-item:hover {
+  background: #f0f4ff;
+  color: #5599e1;
+}
+
+.adm-nav-item.active {
+  background: #5599e1;
+  color: #fff;
+}
+
+.adm-logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: none;
+  background: none;
+  color: #e55;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.adm-logout:hover {
+  background: #fff0f0;
+}
+
+/* ===== MAIN ===== */
+.adm-main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ===== BANNER ===== */
+.adm-banner {
+  background: #5599e1;
+  border-radius: 20px;
+  padding: 36px 44px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.adm-banner-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.adm-banner h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.adm-banner-sub {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.adm-banner-img {
+  height: 160px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ===== STATS ===== */
+.adm-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.adm-stat {
+  flex: 1;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  transition: transform 0.2s;
+}
+
+.adm-stat:hover {
+  transform: translateY(-2px);
+}
+
+.adm-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.adm-stat-icon.pending { background: #fff7ed; color: #f59e0b; }
+.adm-stat-icon.approved { background: #f0fdf4; color: #22c55e; }
+.adm-stat-icon.users { background: #eef3ff; color: #5599e1; }
+
+.adm-stat-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.adm-stat-label {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 2px;
+}
+
+/* ===== SECTION ===== */
+.adm-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.adm-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.adm-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.adm-see-all {
+  background: none;
+  border: none;
+  color: #5599e1;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.adm-empty {
+  color: #aaa;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.adm-empty-state {
+  text-align: center;
+  padding: 60px 0;
+  color: #aaa;
+}
+
+/* ===== PENDING LIST ===== */
+.adm-pending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.adm-pending-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: #f7f9ff;
+  border-radius: 10px;
+  gap: 12px;
+}
+
+.adm-pending-info {
+  flex: 1;
+}
+
+.adm-pending-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+.adm-pending-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.adm-pending-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.adm-approve-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  background: #f0fdf4;
+  color: #22c55e;
+  border: 1.5px solid #bbf7d0;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.adm-approve-btn:hover {
+  background: #22c55e;
+  color: #fff;
+}
+
+.adm-delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+ background: #fff0f0;
+  color: #e55;
+  border: 1.5px solid #ffcccc;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.adm-delete-btn:hover {
+  background: #e55;
+  color: #fff;
+}
+
+/* ===== PAGE LABELS ===== */
+.adm-page-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #5599e1;
+  margin-bottom: 4px;
+}
+
+.adm-page-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ===== APPROVE GRID ===== */
+.adm-approve-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.adm-approve-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.adm-approve-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.adm-approve-body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.adm-approve-badge {
+  display: inline-block;
+  background: #fff7ed;
+  color: #f59e0b;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+}
+
+.adm-approve-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.adm-approve-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  color: #777;
+}
+
+.adm-approve-desc {
+  font-size: 0.82rem;
+  color: #999;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+.adm-approve-actions {
+  display: flex;
+  gap: 10px;
+  padding: 14px 16px;
+}
+
+.adm-approve-btn-full {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.adm-approve-btn-full:hover { background: #16a34a; }
+
+.adm-delete-btn-full {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.adm-delete-btn-full:hover { background: #dc2626; }
+
+/* ===== USERS ===== */
+.adm-users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.adm-user-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.adm-user-avatar {
+  width: 42px;
+  height: 42px;
+  background: #eef3ff;
+  color: #5599e1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.adm-user-info { flex: 1; }
+
+.adm-user-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.adm-user-email {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.adm-user-badge {
+  background: #eef3ff;
+  color: #5599e1;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .adm-stats { flex-direction: column; }
+  .adm-sidebar { width: 200px; min-width: 200px; }
+  .adm-approve-grid { justify-content: center; }
+}

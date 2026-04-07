@@ -1,0 +1,116 @@
+.splash-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #060d1a;
+  /* background-image: radial-gradient(circle at 1px 1px, rgba(85, 153, 225, 0.12) 1px, transparent 0); */
+  background-size: 28px 28px;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+  z-index: 9999;
+}
+
+.splash-container.splash-fadeout {
+  opacity: 0;
+}
+
+/* glow */
+.splash-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(85, 153, 225, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* row */
+.splash-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* logo */
+.splash-logo {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  flex-shrink: 0;
+  animation: blink 1.2s ease-in-out 1;
+  transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(0);
+}
+
+@keyframes blink {
+  0%   { opacity: 0; }
+  30%  { opacity: 1; }
+  55%  { opacity: 0.2; }
+  80%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+.logo-shifted {
+  transform: translateX(-20px);
+}
+
+/* brand text */
+.splash-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  white-space: nowrap;
+  margin-left: 0;
+  transition:
+    max-width 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.6s ease,
+    margin-left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.splash-brand.brand-visible {
+  max-width: 400px;
+  opacity: 1;
+  margin-left: -150px;
+}
+
+.splash-name {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin: 0;
+  line-height: 1;
+  font-family: sans-serif;
+}
+
+.splash-tagline {
+  font-size: 0.72rem;
+  color: #5599e1;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+@media (max-width: 480px) {
+  .splash-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .splash-name {
+    font-size: 2rem;
+  }
+
+  .splash-tagline {
+    font-size: 0.62rem;
+  }
+}

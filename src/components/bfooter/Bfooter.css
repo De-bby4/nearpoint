@@ -1,0 +1,63 @@
+.bfooter-container{
+    background-color: #333;
+    padding: 20px 40px;
+    
+}
+.logo-content{
+    display: flex;
+   font-size: 0.7rem;
+   margin-left: -20px;
+   margin-bottom: -20px;
+}
+.bfooter-logo{
+    margin-top: -20px;
+   
+}
+.logo-text{
+    color: #7fcdf4be;
+    margin-left: -10px;
+    
+}
+.about-text, .contact-text, .link-text{
+    color: #acaaaa;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.bfooter-content{
+    display: flex;
+    justify-content: space-between;
+   margin: 0 auto;
+    /* width: 100%; */
+}
+.about-us{
+    color: #acaaaa;
+    font-size: 0.7rem;
+    width: 250px;
+}
+.bfooter-links{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.8rem;
+    
+}
+
+.contact-info{
+    color: #acaaaa;
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+.contact-info ul{
+    list-style: none;
+}
+a{
+    color: #acaaaa;
+    text-decoration: none;
+}
+.bfooter-line{
+    width: 150px;
+    height: 2px;
+    background-color: #7fcdf4be;
+    margin: 10px 0;
+}

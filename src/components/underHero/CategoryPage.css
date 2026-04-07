@@ -1,0 +1,136 @@
+.category-container {
+  padding: 60px 40px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.category-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5599e1;
+  margin-bottom: 10px;
+}
+
+.category-title {
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.category-subtitle {
+  font-size: 13.5px;
+  color: #999;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 280px));
+  gap: 20px;
+  justify-content: center;
+  padding: 10px 30px;
+  margin-top: 20px; 
+}
+
+.listing-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.listing-card:hover {
+  transform: translateY(-5px);
+}
+
+.business-name {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.address {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.view-map-btn {
+  margin-top: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 0;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.view-map-btn:hover {
+  background-color: #5599e1;
+}
+
+.back-btn-cat {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 25px 0 0 40px;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.back-btn-cat:hover {
+  background-color: #5599e1;
+  color: #fff;
+}
+
+.no-results {
+  text-align: center;
+  color: #999;
+  font-size: 1rem;
+  margin-top: 60px;
+}
+
+@media (max-width: 1100px) {
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 280px));
+  }
+}
+
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: minmax(0, 280px);
+  }
+}

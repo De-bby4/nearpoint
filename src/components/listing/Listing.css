@@ -1,0 +1,178 @@
+.listing-container {
+  background-color: #f5f5f5;
+  padding: 5px 30px
+}
+
+.list-text {
+  text-align: center;
+  padding: 20px;
+}
+
+.list-h2 {
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: #000;
+}
+.card-image-wrapper {
+  position: relative;
+}
+
+.like-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.like-btn:hover {
+  transform: scale(1.05);
+  color: #ff4d6d;
+}
+
+.like-btn.liked {
+  color: #ff4d6d;
+}
+
+.list-p {
+  font-size: 13.5px;
+  color: #999;
+  /* padding-top: -60px; */
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  margin-left: 35px;
+}
+
+.listing-card {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.listing-card:hover {
+  transform: translateY(-5px);
+}
+
+.business-name{
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.address {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card-image{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px 10px 0 0;
+  /* margin-bottom:10px; */
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.star {
+  transition: color 0.2s;
+}
+
+.star:hover {
+  color: #f4b400;
+}
+
+.address-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.view-map-btn {
+  margin-top:10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 70px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.view-map-btn:hover {
+  background-color: #5599e1;
+
+}
+.listing-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.arrow-left-list,
+.arrow-right-list {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-size: 1.3rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.arrow-left-list { left: 0; }
+.arrow-right-list { right: 0; }
+
+.dots-list {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot-list {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.active-dot-list {
+  background-color: #000;
+}
+
+.view-list{
+  display: flex;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

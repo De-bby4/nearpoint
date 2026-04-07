@@ -1,0 +1,74 @@
+.email-container {
+    height: 70vh;
+    min-height: 100px;
+    position: relative;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:
+      linear-gradient(rgba(0,0,58,0.35), rgba(6,6,44,0.35)),
+      url('../../assets/Background4..jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* ADD THIS */
+.email-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);  /* same as hero */
+    z-index: 1;
+}
+
+
+.email-container > * {
+    position: relative;
+    z-index: 2;
+}
+.email-input {
+    position: relative;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.email-input input {
+    width: 100%;
+    padding: 14px 50px; 
+    border-radius: 20px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5599e1;
+    font-size: 16px;
+}
+
+.input-icon.left {
+    left: 18px;
+}
+
+.input-icon.right {
+    right: 18px;
+    cursor: pointer;
+}
+
+.email-text {
+    color: white;
+    font-size: 2.3rem;
+    width: 1000px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 20px;
+}

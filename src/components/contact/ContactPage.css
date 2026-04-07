@@ -1,0 +1,132 @@
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 40px;
+    width: 98.6vw;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #5599e1, #3a7ec9); /* soft light-blue gradient */
+    color: white;
+    gap: 40px;
+}
+
+/* LEFT SIDE */
+.contact-left {
+    width: 40%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+}
+
+.contact-left h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.sub-text {
+    opacity: 0.9;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.info-item h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.partnership-box {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+}
+
+.email-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: white;
+    color: #5599e1; /* changed */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* RIGHT SIDE */
+.contact-right {
+    width: 50%;
+    padding: 30px;
+    background: white;
+    color: #333;
+    border-radius: 20px;
+}
+
+.contact-right h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    outline: none;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+}
+
+.send-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #5599e1; /* changed */
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.send-btn:hover {
+    background: #3a7ec9; /* darker shade of your blue */
+}
+
+.send-icon {
+    font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+}

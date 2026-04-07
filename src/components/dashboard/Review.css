@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+.rev-page {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #f0f4ff;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.rev-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 16px;
+  color: #5599e1;
+}
+
+.rev-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #e0eaff;
+  border-top-color: #5599e1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.rev-main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 36px 40px;
+}
+
+.rev-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #5599e1;
+  border-radius: 20px;
+  padding: 32px 36px;
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+.rev-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+.rev-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.rev-overall {
+  text-align: center;
+}
+
+.rev-avg {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.rev-stars {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.rev-count {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.rev-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rev-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.rev-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.rev-avatar {
+  width: 40px;
+  height: 40px;
+  background: #eef3ff;
+  color: #5599e1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.rev-username {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #000;
+  margin-bottom: 3px;
+}
+
+.rev-stars-row {
+  display: flex;
+  gap: 2px;
+}
+
+.rev-time {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: #aaa;
+}
+
+.rev-text {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.rev-empty {
+  text-align: center;
+  padding: 60px 0;
+  color: #999;
+}
+
+.rev-back-btn {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background: #5599e1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
