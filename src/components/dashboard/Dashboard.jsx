@@ -12,7 +12,6 @@ import {
 import "./Dashboard.css";
 
 const IMGBB_KEY = import.meta.env.VITE_IMGBB_API_KEY;
-const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
 
 const timeAgo = (timestamp) => {
   if (!timestamp) return "";
@@ -530,7 +529,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
-      if (!firebaseUser || firebaseUser.email === ADMIN_EMAIL) {
+      if (!firebaseUser) {
         navigate("/");
         return;
       }
@@ -540,7 +539,6 @@ const Dashboard = () => {
       if (!snapshot.empty) {
         const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
         setBusinesses(data);
-        // set first approved business as active, fallback to first
         const approved = data.find(b => b.status === "approved");
         setActiveBusiness(approved || data[0]);
       }
@@ -632,7 +630,6 @@ const Dashboard = () => {
           ))}
         </nav>
 
-        {/* Business switcher — only show approved ones for switching */}
         {businesses.length > 1 && (
           <div className="dash-switcher">
             <p className="dash-switcher-label">My Businesses</p>
@@ -685,7 +682,6 @@ const Dashboard = () => {
                 </div>
               </div>
 
-              {/* Status banner for active business if pending or rejected */}
               <StatusBanner business={activeBusiness} navigate={navigate} />
 
               {activeBusiness?.status === "approved" && (
