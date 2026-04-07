@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { auth } from "../../firebase";
 import { updatePassword, updateProfile } from "firebase/auth";
-import "./Settings.css";
+// import "./Settings.css";
 
 const Settings = () => {
 
