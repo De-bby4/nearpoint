@@ -5,8 +5,6 @@ import { auth } from "../../firebase";
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 
-// const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
-
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -83,14 +81,6 @@ const Navbar = () => {
             List Your Business
           </button>
         </>
-      );
-    }
-
-    if (user.email === ADMIN_EMAIL) {
-      return (
-        <button className="add-business-btn" onClick={() => navigate('/admin')}>
-          Admin Panel
-        </button>
       );
     }
 
