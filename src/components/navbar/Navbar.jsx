@@ -5,7 +5,7 @@ import { auth } from "../../firebase";
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 
-const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
+// const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
 
 const Navbar = () => {
   const navigate = useNavigate();
